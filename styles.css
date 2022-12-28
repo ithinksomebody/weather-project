@@ -1,0 +1,59 @@
+.container {
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  margin: 25px 70px;
+  display: block;
+}
+.card-body-Newport-News {
+  color: blueviolet;
+  font-size: 120%;
+  font-weight: 600;
+  padding: 20px 20px;
+}
+
+.card-title-two {
+  font-size: 150%;
+  color: white;
+}
+.card-text {
+  font-size: 150%;
+  color: white;
+}
+
+.row-justify-content-end {
+  justify-content: center !important;
+  padding: 10px;
+}
+.btn-light {
+  padding: 10px;
+}
+
+.col-6 {
+  width: 60%;
+}
+h2 {
+  margin: 0px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+}
+.img-fluid-rounded-start {
+  border: 0.5rem;
+}
+
+ul {
+  font-size: 150%;
+  list-style: none;
+  color: #d694d6;
+}
+.hourly-forecast {
+  text-align: left;
+  font-size: 120%;
+  color: #d694d6;
+}
+
+.col-2 {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 600;
+  color: #d694d6;
+  font-size: 100%;
+}
