@@ -13,11 +13,11 @@
 
 .card-title-two {
   font-size: 150%;
-  color: white;
+  color: rgb(220, 114, 255);
 }
 .card-text {
   font-size: 150%;
-  color: white;
+  color: rgb(220, 114, 255);
 }
 
 .row-justify-content-end {
@@ -51,7 +51,7 @@ ul {
   color: #d694d6;
 }
 
-.col-2 {
+.col {
   font-family: "Architects Daughter", cursive;
   font-weight: 600;
   color: #d694d6;
