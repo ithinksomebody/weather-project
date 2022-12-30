@@ -4,6 +4,14 @@
   margin: 25px 70px;
   display: block;
 }
+.weather {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  color: #878787;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  padding: 40px;
+}
 .card-body-Newport-News {
   color: blueviolet;
   font-size: 120%;
