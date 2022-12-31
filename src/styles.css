@@ -10,6 +10,10 @@
   margin: 60px auto;
   max-width: 800px;
 }
+.d-flex {
+  display: flex !important;
+  box-sizing: border-box;
+}
 .card-body-Newport-News {
   color: blueviolet;
   font-size: 120%;
