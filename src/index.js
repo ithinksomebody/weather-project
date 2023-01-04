@@ -33,3 +33,6 @@ function searchCity(event) {
 }
 let form = documnet.querySelector("#form-search");
 form.addEventListener("submit", searchCity);
+
+// let api = "cfa3a2d0o458b3826e41bdfa21t5f2e8";
+// let apiUrl ="https://api.shecodes.io/weather/v1/current?query={query}&key={key}";
