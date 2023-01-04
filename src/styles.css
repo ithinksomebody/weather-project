@@ -58,6 +58,7 @@ h2 {
 }
 
 ul {
+  text-align: left;
   font-size: 150%;
   list-style: none;
   color: #d694d6;
