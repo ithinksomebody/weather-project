@@ -1,3 +1,11 @@
+h1 {
+  color: #7c7c7c;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin: 0;
+}
+
 .weather {
   background: #fff;
   border-radius: 16px;
