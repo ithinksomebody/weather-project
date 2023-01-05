@@ -22,6 +22,13 @@ h1 {
     rgb(198, 232, 221) 100.2%
   );
 }
+.heading-date {
+  color: white;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
 .col-2 {
   background: radial-gradient(
     circle at 10% 20%,
@@ -87,12 +94,11 @@ h2 {
 ul {
   font-size: 150%;
   list-style: none;
-  color: #d694d6;
+  color: white;
 }
 .hourly-forecast {
   text-align: left;
   font-size: 120%;
-  color: #d694d6;
 }
 
 .col {
