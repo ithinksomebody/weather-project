@@ -1,7 +1,5 @@
-body {
-}
 h1 {
-  color: #7c7c7c;
+  color: white;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -31,9 +29,11 @@ h1 {
     rgb(255, 255, 255) 0%,
     rgb(215, 223, 252) 84%
   );
+  color: rgb(153, 234, 153);
   box-sizing: border-box;
   display: block;
-  font-size: 16px;
+  font-size: 26px;
+  font-weight: 600;
   padding: 10px;
   border: #e3e3e3 1px solid;
   border-radius: 15%;
