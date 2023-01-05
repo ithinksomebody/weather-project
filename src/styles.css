@@ -19,7 +19,7 @@ h1 {
   padding: 40px;
 }
 .col-2 {
-  background-color: rgb(220, 114, 255);
+  background-color: rgba(248, 249, 250, var);
   box-sizing: border-box;
   display: block;
   font-size: 16px;
