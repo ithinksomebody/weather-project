@@ -36,7 +36,7 @@ h1 {
     rgb(255, 255, 255) 0%,
     rgb(215, 223, 252) 84%
   );
-  color: rgb(153, 234, 153);
+  color: rgb(55, 1, 1);
   box-sizing: border-box;
   display: block;
   font-size: 26px;
@@ -46,7 +46,15 @@ h1 {
   border-radius: 15%;
   text-align: center;
 }
-
+.card-body-Newport-News {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 10px;
+  border: #e3e3e3 1px solid;
+  border-radius: 15%;
+  text-align: center;
+}
 .app-wrapper {
   margin: 60px auto;
   max-width: 900px;
