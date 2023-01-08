@@ -59,10 +59,7 @@ h1 {
   margin: 60px auto;
   max-width: 900px;
 }
-.col-4 {
-  margin: 60px auto;
-  max-width: 400px;
-}
+
 .d-flex {
   box-sizing: border-box;
 }
