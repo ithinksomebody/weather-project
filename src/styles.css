@@ -62,9 +62,10 @@ h1 {
 .col-4 {
   float: right;
 }
-img {
+.clear-fix {
   position: relative;
   top: 20px;
+  right: -100px;
 }
 .d-flex {
   box-sizing: border-box;
