@@ -9,14 +9,15 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-let now = new Date();
-now.toString();
+  let now = new Date();
+  now.toString();
 
-let currentTime = now.getHour();
+  let currentTime = now.getHour();
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = days[now.getDay()];
-
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 let months = [
   "Jan",
   "Feb",
