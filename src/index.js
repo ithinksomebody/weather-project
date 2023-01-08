@@ -1,4 +1,3 @@
-let api = "cfa3a2d0o458b3826e41bdfa21t5f2e8";
 function searchCity(event) {
   event.preventDefault();
   let h1 = document.querySelector("#city-input");
@@ -7,10 +6,14 @@ function searchCity(event) {
   h2.innerHTML = cityInput.value;
   let heading = document.querySelector("#current-date");
   heading.innerHTML = cityInput.value;
+
+  axios.get(apiUrl).then(showTemperature);
 }
+
 let form = documnet.querySelector("#search-bar");
 form.addEventListener("submit", searchCity);
 
+let api = "cfa3a2d0o458b3826e41bdfa21t5f2e8";
 let apiUrl =
   "https://api.shecodes.io/weather/v1/current?query=Boston&key=cfa3a2d0o458b3826e41bdfa21t5f2e8&units=metric";
 
@@ -24,8 +27,6 @@ function showTemperature(response) {
     response.data.temperature.humidity
   );
 }
-
-axios.get(apiUrl).then(showTemperature);
 
 function formatDate(timestamp) {
   let date = new Date(timestamp);
