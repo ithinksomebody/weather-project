@@ -59,7 +59,9 @@ h1 {
   margin: 60px auto;
   max-width: 900px;
 }
-
+.col-4 {
+  float: right;
+}
 .d-flex {
   box-sizing: border-box;
 }
