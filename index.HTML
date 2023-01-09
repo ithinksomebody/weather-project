@@ -33,13 +33,14 @@
                 </div>
 
                 <div class="col-6">
-                  <form id="search-bar">
+                  <form id="search-form">
                     <div class="row">
                       <div class="col-9">
                         <input
                           type="text"
                           class="form-control"
                           placeholder=" Search city"
+                          autcomplete="off"
                           id="city-input"
                         />
                       </div>
@@ -56,7 +57,7 @@
                 </div>
               </div>
               <div>
-                <h1>Newport News</h1>
+                <h1 id="city">Newport News</h1>
                 <div class="row">
                   <div class="col-6">
                     <div class="clearfix">
@@ -65,7 +66,7 @@
                         alt="Cloudy icon"
                         id="weather-icon"
                       />
-                      <span class="temp" id="current-forecast">56 ° </span>
+                      <span class="temp" id="current-temperature">56 ° </span>
                       <span class="unit">F </span>
                     </div>
                   </div>
@@ -135,7 +136,7 @@
             </div>
             <div class="row justify-content-start">
               <div class="card-body-Newport-News">
-                <h2 class="card-subtitle mb-2 text-muted" id="city-facts">
+                <h2 class="card-subtitle mb-2 text-muted" id="city">
                   Newport News , VA
                 </h2>
                 <p class="Fun-facts">
