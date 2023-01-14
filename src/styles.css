@@ -25,8 +25,6 @@ h1 {
 .heading-date {
   color: white;
   font-size: 38px;
-  font-weight: 600;
-  line-height: 28px;
   margin-bottom: 20px;
 }
 .col-2 {
@@ -45,6 +43,11 @@ h1 {
   border: #e3e3e3 1px solid;
   border-radius: 15%;
   text-align: center;
+}
+.current-temperature {
+  font-size: 40px;
+  color: white;
+  margin-top: 15px;
 }
 .card-body-Newport-News {
   display: block;
