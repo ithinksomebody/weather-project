@@ -5,7 +5,7 @@ function showTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
 
-  temperatureElement.innerHTML = response.data.temperature;
+  temperatureElement.innerHTML = response.data.temperature.current;
   h1.innerHTML = response.data.city;
   h2.innerHTML = response.data.city;
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
@@ -24,12 +24,11 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
-let form = documnet.querySelector("#search-form");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 function cityInput(event) {
   let currentDate = document.querySelector("#current-date");
-  currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
   let now = new Date();
   let hours = now.getHours();
@@ -66,10 +65,11 @@ function cityInput(event) {
     "Nov",
     "Dec",
   ];
-  let month = month[now.getMonths()];
+  let month = months[now.getMonth()];
 
   let day = days[now.getDay()];
   let li = document.querySelector("#current-date");
+  currentDate.innerHTML = `${day} ${hours}:${minutes}`;
   li.innerHTML = `${day} , ${hours}:${minutes}`;
 
   if (cityInput.value) {
