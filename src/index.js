@@ -31,6 +31,7 @@ function cityInput(event) {
   let currentDate = document.querySelector("#current-date");
 
   let now = new Date();
+  let date = now.getdate();
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -69,8 +70,8 @@ function cityInput(event) {
 
   let day = days[now.getDay()];
   let li = document.querySelector("#current-date");
-  currentDate.innerHTML = `${day} ${hours}:${minutes}`;
-  li.innerHTML = `${day} , ${hours}:${minutes}`;
+  currentDate.innerHTML = `${day} ${month} ${date}  ${hours}:${minutes}`;
+  li.innerHTML = `${day} , ${month} ${date} ${hours}:${minutes}`;
 
   if (cityInput.value) {
     h1.innerHTML = ` ${cityInput.value}`;
