@@ -44,7 +44,8 @@ h1 {
   border-radius: 15%;
   text-align: center;
 }
-.current-temperature {
+.temp,
+.unit {
   font-size: 40px;
   color: white;
   margin-top: 15px;
