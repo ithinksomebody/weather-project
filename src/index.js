@@ -4,12 +4,18 @@ function showTemperature(response) {
   let h2 = document.querySelector("#city");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
+  let icon = document.querySelector("#weather-icon");
 
   temperatureElement.innerHTML = response.data.temperature.current;
   h1.innerHTML = response.data.city;
   h2.innerHTML = response.data.city;
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
   wind.innerHTML = Math.round(response.data.temperature.wind);
+  icon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  icon.setAttribute("alt", `${response.data.condition.description}`);
 }
 
 function search(city) {
