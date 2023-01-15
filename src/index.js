@@ -7,6 +7,7 @@ function showTemperature(response) {
   let icon = document.querySelector("#weather-icon");
 
   temperatureElement.innerHTML = response.data.temperature.current;
+
   h1.innerHTML = response.data.city;
   h2.innerHTML = response.data.city;
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
@@ -15,7 +16,7 @@ function showTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  icon.setAttribute("alt", `${response.data.condition.description}`);
+  icon.setAttribute("alt", response.data.condition.description);
 }
 
 function search(city) {
