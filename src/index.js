@@ -14,7 +14,7 @@ function showTemperature(response) {
   h1.innerHTML = response.data.city;
   h2.innerHTML = response.data.city;
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
-  wind.innerHTML = Math.round(response.data.temperature.wind);
+  wind.innerHTML = Math.round(response.data.wind.speed);
   icon.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
