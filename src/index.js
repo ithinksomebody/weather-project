@@ -5,7 +5,7 @@ function showTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let icon = document.querySelector("#weather-icon");
-
+  celciusTemperature = response.data.temperature.current;
   temperatureElement.innerHTML = response.data.temperature.current;
 
   h1.innerHTML = response.data.city;
@@ -86,5 +86,25 @@ function cityInput(event) {
     //   alert("Please type something");
   }
 }
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let currentTemperatue = document.querySelector("#current-temperature");
+  currentTemperatue.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  let currentTemperatue = document.querySelector("#current-temperature");
+  currentTemperatue.innerHTML = Math.round(celciusTemperature);
+}
 
 cityInput();
+
+let celciusTemperature = null;
+
+let ccelcius = document.querySelector("#celcius");
+celcius.addEventListener("click", displayCelciusTemp);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemp);
