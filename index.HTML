@@ -28,39 +28,39 @@
           <div class="weather">
             <div class="weather-Info">
               <div class="row">
-                <div class="col-6">
+                <div class="heading-enterSearch">
                   <p class="heading-date" id="current-date">Friday,Nov 25th</p>
-                </div>
-
-                <div class="col-6">
-                  <form id="search-form">
-                    <div class="row">
-                      <div class="col-9">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder=" Search city"
-                          autcomplete="off"
-                          id="city-input"
-                        />
+                  <div class="form">
+                    <form id="search-form">
+                      <div class="row">
+                        <div class="col-9">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder=" Search city"
+                            autcomplete="off"
+                            id="city-input"
+                          />
+                        </div>
+                        <div class="col-3">
+                          <input
+                            type="submit"
+                            value="Search"
+                            id="search-button"
+                            class="btn btn-primary w-100"
+                          />
+                        </div>
                       </div>
-                      <div class="col-3 p-0">
-                        <input
-                          type="submit"
-                          value="Search"
-                          id="search-button"
-                          class="btn btn-primary w-100"
-                        />
-                      </div>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </div>
               <div>
-                <h1 id="city">Newport News</h1>
-                <ul>
-                  <li class="weather-description" id="description"></li>
-                </ul>
+                <div>
+                  <h1 class="cityNameSearch" id="city">Newport News</h1>
+                  <li class="updated-time" id="hourly-time"></li>
+                </div>
+                <li class="weather-description" id="description"></li>
                 <div class="row">
                   <div class="col-6">
                     <div class="clearfix currentWeatherTemperature">

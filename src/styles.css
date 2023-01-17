@@ -1,9 +1,8 @@
 h1 {
   color: white;
   font-size: 38px;
-  font-weight: 500;
-  line-height: 28px;
   margin: 0;
+  padding: 15px 0px;
 }
 .weather-data {
   text-align: right;
@@ -32,6 +31,10 @@ h1 {
   color: white;
   font-size: 38px;
   margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #f9f7fe;
+  margin-top: 10px;
+  padding-bottom: 30px;
 }
 .col-2 {
   background: radial-gradient(
@@ -49,6 +52,23 @@ h1 {
   border: #e3e3e3 1px solid;
   border-radius: 15%;
   text-align: center;
+}
+.updated-time {
+  padding: 15px 0px 0px;
+}
+.cityNameSearch {
+  padding-bottom: 0px;
+}
+.weather-description {
+  list-style: none;
+  color: white;
+  list-style: none;
+  font-size: x-large;
+}
+.updated-time {
+  color: white;
+  list-style: none;
+  font-size: x-large;
 }
 .temp {
   color: white;

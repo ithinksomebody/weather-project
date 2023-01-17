@@ -79,9 +79,9 @@ function cityInput(event) {
   let month = months[now.getMonth()];
 
   let day = days[now.getDay()];
-  let li = document.querySelector("#current-date");
-  currentDate.innerHTML = `${day} ${month} ${date}  ${hours}:${minutes}`;
-  li.innerHTML = `${day} ,${month} ${date}  ${hours}:${minutes}`;
+  let li = document.querySelector("#hourly-time");
+  currentDate.innerHTML = `${day} , ${month} ${date}`;
+  li.innerHTML = `Last updated: ${hours}:${minutes}`;
 
   if (cityInput.value) {
     h1.innerHTML = ` ${cityInput.value}`;
