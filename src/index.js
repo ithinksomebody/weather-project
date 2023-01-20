@@ -109,8 +109,28 @@ function displayCelciusTemp(event) {
   currentTemperatue.innerHTML = Math.round(celciusTemperature);
 }
 
-cityInput();
+function forecastWeek(response) {
+  let weeksForecast = document.querySelector("#forecast-week");
+  let forecastHTML = `<div class = "row"> `;
+  let days = ["Thu", "Fri", "Sun"];
+  days.forEach(function (days) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                  <div class="week-day">
+                    ${days}
+                    <br />
+                    🌧️
+                    <p id="current-temp-week">67°F</p>
+                  </div>
+                </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  weeksForecast.innerHTML = forecastHTML;
+}
 
+cityInput();
+forecastWeek();
 let celciusTemperature = null;
 
 let celcius = document.querySelector("#celcius");
