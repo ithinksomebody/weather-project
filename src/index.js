@@ -77,23 +77,44 @@ function showTemperature(response) {
   console.log(response);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function forecastWeek(response) {
-  console.log(response.data);
+  let forecast = response.data.daily;
   let weeksForecast = document.querySelector("#forecast-week");
   let forecastHTML = `<div class = "row"> `;
-  let days = ["Thu", "Fri", "Sun"];
-  days.forEach(function (days) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-                  <div class="week-day">
-                    ${days}
-                    <br />
-                    🌧️
-                    <p id="current-temp-week">67°F</p>
-                  </div>
-                </div>`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `  <div class="col-2">
+              <div class="week-day">
+                ${formatDay(forecastDay.time)}</div>
+                <br />
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                    forecastDay.condition.icon
+                  }.png"
+                  alt=""
+                  width="60"
+                />
+                <p id="current-temp-week"> ${Math.round(
+                  forecastDay.temperature.maximum
+                )}
+              °F | <span id="">  ${Math.round(
+                forecastDay.temperature.minimum
+              )}°C </span></p>
+              </div>`;
+    }
   });
+
   forecastHTML = forecastHTML + `</div>`;
   weeksForecast.innerHTML = forecastHTML;
 }
