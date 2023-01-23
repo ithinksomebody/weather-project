@@ -61,8 +61,6 @@ function showTemperature(response) {
   let description = document.querySelector("#description");
   let homePage = document.querySelector("#homePage");
 
-  homePage.remove();
-
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
   description.innerHTML = response.data.condition.description;
@@ -134,11 +132,14 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
+  homePage.remove();
   let cityInput = document.querySelector("#city-input");
   search(cityInput.value);
 }
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let homePage = document.querySelector("#homePage");
 
 cityInput();
