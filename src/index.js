@@ -112,7 +112,7 @@ function forecastWeek(response) {
                 )}
               °F | <span id="">  ${Math.round(
                 forecastDay.temperature.minimum
-              )}°C </span></p>
+              )}°F</span></p>
               </div>`;
     }
   });
@@ -123,7 +123,7 @@ function forecastWeek(response) {
 
 function getForecast(coordinates) {
   let apiKey = "cfa3a2d0o458b3826e41bdfa21t5f2e8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(forecastWeek);
 }
 function search(city) {
