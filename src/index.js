@@ -59,6 +59,9 @@ function showTemperature(response) {
   let wind = document.querySelector("#wind");
   let icon = document.querySelector("#weather-icon");
   let description = document.querySelector("#description");
+  let homePage = document.querySelector("#homePage");
+
+  homePage.remove();
 
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
@@ -73,6 +76,7 @@ function showTemperature(response) {
   );
   icon.setAttribute("alt", response.data.condition.description);
   getForecast(response.data.coordinates);
+  console.log(response);
 }
 
 function formatDay(timestamp) {
@@ -101,7 +105,7 @@ function forecastWeek(response) {
                     forecastDay.condition.icon
                   }.png"
                   alt=""
-                  width="50"
+                 
                 />
                 <p id="current-temp-week"> ${Math.round(
                   forecastDay.temperature.maximum
