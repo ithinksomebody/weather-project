@@ -60,7 +60,6 @@ function showTemperature(response) {
   let icon = document.querySelector("#weather-icon");
   let description = document.querySelector("#description");
 
-  celciusTemperature = response.data.temperature.current;
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
   description.innerHTML = response.data.condition.description;
@@ -74,7 +73,6 @@ function showTemperature(response) {
   );
   icon.setAttribute("alt", response.data.condition.description);
   getForecast(response.data.coordinates);
-  console.log(response);
 }
 
 function formatDay(timestamp) {
@@ -139,32 +137,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-
-  celcius.classList.remove("active");
-  fahrenheit.classList.add("active");
-
-  let currentTemperatue = document.querySelector("#current-temperature");
-  currentTemperatue.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelciusTemp(event) {
-  event.preventDefault();
-  celcius.classList.add("active");
-  fahrenheit.classList.remove("active");
-
-  let currentTemperatue = document.querySelector("#current-temperature");
-  currentTemperatue.innerHTML = Math.round(celciusTemperature);
-}
-
 cityInput();
-
-let celciusTemperature = null;
-
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", displayCelciusTemp);
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheitTemp);
