@@ -103,7 +103,7 @@ function forecastWeek(response) {
                     forecastDay.condition.icon
                   }.png"
                   alt=""
-                  width="60"
+                  width="50"
                 />
                 <p id="current-temp-week"> ${Math.round(
                   forecastDay.temperature.maximum
@@ -126,7 +126,7 @@ function getForecast(coordinates) {
 }
 function search(city) {
   let apiKey = "cfa3a2d0o458b3826e41bdfa21t5f2e8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
 }
 
